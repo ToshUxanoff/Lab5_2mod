@@ -21,4 +21,6 @@ int main()
 	{
 		std::cout << e.what();
 	}
+	system("pause");
+	return 0;
 }
