@@ -12,4 +12,8 @@ public:
 	{
 		Pointer->Close();
 	}
+	TClosingFile()
+	{
+		Pointer = nullptr;
+	}
 };
