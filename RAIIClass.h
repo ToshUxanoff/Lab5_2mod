@@ -2,14 +2,14 @@
 #include "TNotCopyable.h"
 class TClosingFile //RAII
 {
-	TNotCopyable * Descriptor;
+	TNotCopyable * Pointer;
 public:
 	TClosingFile(TNotCopyable* ptr)
 	{
-		Descriptor = ptr;
+		Pointer = ptr;
 	}
 	~TClosingFile()
 	{
-		Descriptor->Close();
+		Pointer->Close();
 	}
 };
