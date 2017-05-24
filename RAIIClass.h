@@ -6,7 +6,7 @@ class TClosingFile //RAII
 {
 	TNotCopyable & Pointer;
 public:
-	TClosingFile(TNotCopyable* ptr) :Pointer (*ptr)
+	TClosingFile(TNotCopyable& ptr) :Pointer (ptr)
 	{
 	}
 	~TClosingFile()
