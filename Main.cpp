@@ -9,7 +9,7 @@ int main()
 	{
 		TNotCopyable obj;
 
-		TClosingFile ptr(&obj);
+		TClosingFile ptr(obj);
 
 		obj.OpenToWrite("someFile.txt");
 
