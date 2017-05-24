@@ -1,19 +1,16 @@
+#pragma once
 #include "stdafx.h"
 #include "TNotCopyable.h"
+
 class TClosingFile //RAII
 {
-	TNotCopyable * Pointer;
+	TNotCopyable & Pointer;
 public:
-	TClosingFile(TNotCopyable* ptr)
+	TClosingFile(TNotCopyable* ptr) :Pointer (*ptr)
 	{
-		Pointer = ptr;
 	}
 	~TClosingFile()
 	{
-		Pointer->Close();
-	}
-	TClosingFile()
-	{
-		Pointer = nullptr;
+		Pointer.Close();
 	}
 };
