@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "TNotCopyable.h"
-#include "RAIIClass.h"
+#include "TClosingFIle.h"
 #include <iostream>
 
 int main()
